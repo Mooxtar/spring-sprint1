@@ -1,0 +1,27 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-12">
+      <table class="table">
+        <thead>
+        <tr>
+          <th>ID</th>
+          <th>NAME</th>
+          <th>SURNAME</th>
+          <th>EXAM</th>
+          <th style="width: 10%">MARK</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="stu : ${studentter}" th:style="${(stu.exam < 50)?'color:red;':''}">
+
+          <td th:text="${stu.id}"></td>
+          <td th:text="${stu.name}"></td>
+          <td th:text="${stu.surname}"></td>
+          <td th:text="${stu.exam}"></td>
+          <td th:text="${stu.mark}"></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
